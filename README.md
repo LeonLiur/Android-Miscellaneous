@@ -1,2 +1,3 @@
 # Android-Miscellaneous
-Repository for various micellaneous
+Repository for various micellaneous android projects
+ 
