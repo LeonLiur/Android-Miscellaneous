@@ -1,3 +1,2 @@
 # Android-Miscellaneous
-Repository for various micellaneous android projects
- 
+Repository for the android project "Spam Clickr"
