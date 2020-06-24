@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "517383720648",
+    "firebase_url": "https://leonliur-test.firebaseio.com",
+    "project_id": "leonliur-test",
+    "storage_bucket": "leonliur-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517383720648:android:6ec531438c679711ec5ffd",
+        "android_client_info": {
+          "package_name": "com.example.leonliur_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517383720648-kima3kv1emo4js2v97sflbhft1331qcb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEjSM6Zpugicj1EwsQtWcZMrKLboF_9zY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517383720648-kima3kv1emo4js2v97sflbhft1331qcb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "517383720648-i0tiqktijn2bq4icgs27354rsfsgt3nh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.leonliur-test"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517383720648:android:ef4859760044e341ec5ffd",
+        "android_client_info": {
+          "package_name": "com.example.spamclickr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517383720648-kima3kv1emo4js2v97sflbhft1331qcb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEjSM6Zpugicj1EwsQtWcZMrKLboF_9zY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517383720648-kima3kv1emo4js2v97sflbhft1331qcb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "517383720648-i0tiqktijn2bq4icgs27354rsfsgt3nh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.leonliur-test"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
