@@ -2,6 +2,7 @@ package com.example.spamclickr;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -18,9 +19,8 @@ public class Clicker extends AppCompatActivity {
     private Button clicker;
     private Button reset;
     private boolean started;
-    private int counter;
+    public static int counter;
     private long timeLeft = 15000;
-    private Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +31,12 @@ public class Clicker extends AppCompatActivity {
         showTime = (TextView) findViewById(R.id.showTime);
         clicker = (Button) findViewById(R.id.buttonClick);
         reset = (Button) findViewById(R.id.buttonReset);
-        started = false;
-        counter = 0;
     }
 
-    private void showTime() {
-        while(timeLeft>=0){
-            String time = "00:" + timeLeft/1000;
-            showTime.setText(time);
-        }
-        timer.cancel();
-        clicker.setEnabled(false);
+    @Override
+    protected void onStart() {
+        super.onStart();
+        initializeTimer();
     }
 
     public void onClick(View view){
@@ -61,7 +56,10 @@ public class Clicker extends AppCompatActivity {
                 @Override
                 public void onFinish() {
                     clicker.setEnabled(false);
+                    Intent intent = new Intent(Clicker.this, Score_page.class);
+                    startActivity(intent);
                 }
+
             }.start();
         }
 
@@ -76,5 +74,13 @@ public class Clicker extends AppCompatActivity {
         }
 
         showTime.setText(time);
+    }
+
+    public void initializeTimer(){
+        started = false;
+        clicker.setEnabled(true);
+        timeLeft = 15000;
+        counter = 0;
+        clickCounter.setText("");
     }
 }
