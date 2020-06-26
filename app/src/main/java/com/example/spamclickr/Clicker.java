@@ -21,6 +21,7 @@ public class Clicker extends AppCompatActivity {
     private boolean started;
     public static int counter;
     private long timeLeft = 15000;
+    private CountDownTimer cdt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,7 @@ public class Clicker extends AppCompatActivity {
         }else{
             started = true;
             clicker.setText("Click me!");
-            CountDownTimer cdt = new CountDownTimer(timeLeft, 1000) {
+            cdt = new CountDownTimer(timeLeft, 1000) {
                 @Override
                 public void onTick(long l) {
                     timeLeft = l;
@@ -61,6 +62,8 @@ public class Clicker extends AppCompatActivity {
                 }
 
             }.start();
+            counter = 1;
+            clickCounter.setText(Integer.toString(1));
         }
 
     }
@@ -81,6 +84,15 @@ public class Clicker extends AppCompatActivity {
         clicker.setEnabled(true);
         timeLeft = 15000;
         counter = 0;
-        clickCounter.setText("");
+        clickCounter.setText("0");
+        if(cdt!=null){
+            cdt.cancel();
+            cdt = null;
+        }
+        showTime.setText("00:15");
+    }
+
+    public void onClickReset(View view){
+        initializeTimer();
     }
 }
